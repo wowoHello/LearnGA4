@@ -1,142 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GA4 練習網站</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JBBEDV1G4T"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JBBEDV1G4T");
+    </script>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
     <div class="container">
-        <!-- Header Navigation -->
-        <header>
-            <nav>
-                <div class="logo">🛍️ GA4 測試商店</div>
-                <div class="nav-links">
-                    <a href="#home" onclick="trackEvent('navigation', 'click', 'home')">首頁</a>
-                    <a href="#products" onclick="trackEvent('navigation', 'click', 'products')">商品</a>
-                    <a href="#about" onclick="trackEvent('navigation', 'click', 'about')">關於我們</a>
-                    <a href="#contact" onclick="trackEvent('navigation', 'click', 'contact')">聯絡我們</a>
-                </div>
-            </nav>
-        </header>
+      <!-- Header Navigation -->
+      <header>
+        <nav>
+          <div class="logo">🛍️ GA4 測試商店</div>
+          <div class="nav-links">
+            <a href="#home" onclick="trackEvent('navigation', 'click', 'home')"
+              >首頁</a
+            >
+            <a
+              href="#products"
+              onclick="trackEvent('navigation', 'click', 'products')"
+              >商品</a
+            >
+            <a
+              href="#about"
+              onclick="trackEvent('navigation', 'click', 'about')"
+              >關於我們</a
+            >
+            <a
+              href="#contact"
+              onclick="trackEvent('navigation', 'click', 'contact')"
+              >聯絡我們</a
+            >
+          </div>
+        </nav>
+      </header>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1>歡迎來到 GA4 測試練習網站</h1>
-            <p>這裡有各種互動元素，幫助你練習 Google Analytics 4 的事件追蹤功能</p>
-            <button class="cta-button" onclick="trackEvent('engagement', 'cta_click', 'hero_button')">
-                開始探索
-            </button>
-        </section>
+      <!-- Hero Section -->
+      <section class="hero">
+        <h1>歡迎來到 GA4 測試練習網站</h1>
+        <p>這裡有各種互動元素，幫助你練習 Google Analytics 4 的事件追蹤功能</p>
+        <button
+          class="cta-button"
+          onclick="trackEvent('engagement', 'cta_click', 'hero_button')"
+        >
+          開始探索
+        </button>
+      </section>
 
-        <!-- Products Section -->
-        <section class="products">
-            <div class="product-card">
-                <div class="product-image">📱</div>
-                <div class="product-title">智慧型手機</div>
-                <div class="product-price">NT$ 15,999</div>
-                <button class="add-to-cart" onclick="trackPurchase('smartphone', 15999)">
-                    加入購物車
-                </button>
-            </div>
+      <!-- Products Section -->
+      <section class="products">
+        <div class="product-card">
+          <div class="product-image">📱</div>
+          <div class="product-title">智慧型手機</div>
+          <div class="product-price">NT$ 15,999</div>
+          <button
+            class="add-to-cart"
+            onclick="trackPurchase('smartphone', 15999)"
+          >
+            加入購物車
+          </button>
+        </div>
 
-            <div class="product-card">
-                <div class="product-image">💻</div>
-                <div class="product-title">筆記型電腦</div>
-                <div class="product-price">NT$ 29,999</div>
-                <button class="add-to-cart" onclick="trackPurchase('laptop', 29999)">
-                    加入購物車
-                </button>
-            </div>
+        <div class="product-card">
+          <div class="product-image">💻</div>
+          <div class="product-title">筆記型電腦</div>
+          <div class="product-price">NT$ 29,999</div>
+          <button class="add-to-cart" onclick="trackPurchase('laptop', 29999)">
+            加入購物車
+          </button>
+        </div>
 
-            <div class="product-card">
-                <div class="product-image">🎧</div>
-                <div class="product-title">無線耳機</div>
-                <div class="product-price">NT$ 3,499</div>
-                <button class="add-to-cart" onclick="trackPurchase('headphones', 3499)">
-                    加入購物車
-                </button>
-            </div>
-        </section>
+        <div class="product-card">
+          <div class="product-image">🎧</div>
+          <div class="product-title">無線耳機</div>
+          <div class="product-price">NT$ 3,499</div>
+          <button
+            class="add-to-cart"
+            onclick="trackPurchase('headphones', 3499)"
+          >
+            加入購物車
+          </button>
+        </div>
+      </section>
 
-        <!-- Features Section -->
-        <section class="features">
-            <h2>網站功能特色</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">🚀</div>
-                    <h3>頁面瀏覽追蹤</h3>
-                    <p>測試基本的頁面瀏覽事件</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🛒</div>
-                    <h3>電商事件</h3>
-                    <p>練習購買、加入購物車等電商追蹤</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">👆</div>
-                    <h3>用戶互動</h3>
-                    <p>追蹤點擊、滾動、表單提交等行為</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">📊</div>
-                    <h3>自訂事件</h3>
-                    <p>建立和測試自訂的 GA4 事件</p>
-                </div>
-            </div>
-        </section>
+      <!-- Features Section -->
+      <section class="features">
+        <h2>網站功能特色</h2>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="feature-icon">🚀</div>
+            <h3>頁面瀏覽追蹤</h3>
+            <p>測試基本的頁面瀏覽事件</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🛒</div>
+            <h3>電商事件</h3>
+            <p>練習購買、加入購物車等電商追蹤</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">👆</div>
+            <h3>用戶互動</h3>
+            <p>追蹤點擊、滾動、表單提交等行為</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">📊</div>
+            <h3>自訂事件</h3>
+            <p>建立和測試自訂的 GA4 事件</p>
+          </div>
+        </div>
+      </section>
 
-        <!-- Newsletter Section -->
-        <section class="newsletter">
-            <h2>訂閱電子報</h2>
-            <p>獲得最新商品資訊和優惠</p>
-            <form class="newsletter-form" onsubmit="trackNewsletter(event)">
-                <input type="email" class="newsletter-input" placeholder="輸入您的 Email" required>
-                <button type="submit" class="newsletter-button">訂閱</button>
-            </form>
-        </section>
+      <!-- Newsletter Section -->
+      <section class="newsletter">
+        <h2>訂閱電子報</h2>
+        <p>獲得最新商品資訊和優惠</p>
+        <form class="newsletter-form" onsubmit="trackNewsletter(event)">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="輸入您的 Email"
+            required
+          />
+          <button type="submit" class="newsletter-button">訂閱</button>
+        </form>
+      </section>
 
-        <!-- Social Share Section -->
-        <section class="social-share">
-            <h2>分享給朋友</h2>
-            <div class="social-buttons">
-                <a href="#" class="social-button facebook" onclick="trackSocial('facebook')">
-                    分享到 Facebook
-                </a>
-                <a href="#" class="social-button twitter" onclick="trackSocial('twitter')">
-                    分享到 Twitter
-                </a>
-                <a href="#" class="social-button line" onclick="trackSocial('line')">
-                    分享到 LINE
-                </a>
-                <a href="#" class="social-button youtube" onclick="trackSocial('youtube')">
-                    訂閱 YouTube
-                </a>
-            </div>
-        </section>
+      <!-- Social Share Section -->
+      <section class="social-share">
+        <h2>分享給朋友</h2>
+        <div class="social-buttons">
+          <a
+            href="#"
+            class="social-button facebook"
+            onclick="trackSocial('facebook')"
+          >
+            分享到 Facebook
+          </a>
+          <a
+            href="#"
+            class="social-button twitter"
+            onclick="trackSocial('twitter')"
+          >
+            分享到 Twitter
+          </a>
+          <a href="#" class="social-button line" onclick="trackSocial('line')">
+            分享到 LINE
+          </a>
+          <a
+            href="#"
+            class="social-button youtube"
+            onclick="trackSocial('youtube')"
+          >
+            訂閱 YouTube
+          </a>
+        </div>
+      </section>
 
-        <!-- Download Section -->
-        <section class="download-section">
-            <h2>免費資源下載</h2>
-            <p>下載我們的 GA4 設定指南</p>
-            <a href="#" class="download-button" onclick="trackDownload('ga4_guide')">
-                📄 下載 PDF 指南
-            </a>
-            <a href="#" class="download-button" onclick="trackDownload('ga4_template')">
-                📊 下載設定模板
-            </a>
-        </section>
+      <!-- Download Section -->
+      <section class="download-section">
+        <h2>免費資源下載</h2>
+        <p>下載我們的 GA4 設定指南</p>
+        <a
+          href="#"
+          class="download-button"
+          onclick="trackDownload('ga4_guide')"
+        >
+          📄 下載 PDF 指南
+        </a>
+        <a
+          href="#"
+          class="download-button"
+          onclick="trackDownload('ga4_template')"
+        >
+          📊 下載設定模板
+        </a>
+      </section>
     </div>
 
     <!-- Modal -->
     <div class="modal" id="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3 id="modal-title">成功！</h3>
-            <p id="modal-message">操作已完成</p>
-        </div>
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title">成功！</h3>
+        <p id="modal-message">操作已完成</p>
+      </div>
     </div>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
