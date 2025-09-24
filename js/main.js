@@ -1,26 +1,6 @@
 // 模擬 GA4 事件追蹤函數
 // 在實際使用時，您需要替換為真正的 gtag 函數
 
-function trackEvent(action, event_category, event_label) {
-  console.log("Push Event to dataLayer:", {
-    event: action,
-    event_category: event_category,
-    event_label: event_label,
-    timestamp: new Date().toISOString(),
-  });
-
-  // 推送事件到 GTM dataLayer
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-        event: action,                  // 事件名稱（GA4 會收到的 event_name）
-        event_category: event_category, // 自訂參數
-        event_label: event_label,       // 自訂參數
-        action: action                  // 自訂參數
-    });
-
-  showModal("事件已追蹤", `${action} - ${event_category} - ${event_label}`);
-}
-
 function trackPurchase(product_name, price) {
   console.log("GA4 Purchase Event:", {
     event_name: "add_to_cart",
@@ -50,14 +30,12 @@ function trackPurchase(product_name, price) {
     ],
   });
 
-  // 顯示提示
-  showModal("已加入購物車", `${product_name} - NT$ ${price.toLocaleString()}`);
-
-  // 延遲一點時間再跳轉，確保事件有機會送出
+  // 等 0.5 秒再跳轉，避免事件還沒送出就中斷
   setTimeout(() => {
     window.location.href = "phone.html";
-  }, 800); // 0.8 秒後導頁
+  }, 500);
 }
+
 
 
 function trackNewsletter(event) {
