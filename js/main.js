@@ -35,19 +35,30 @@ function trackPurchase(product_name, price) {
     ],
   });
 
-  // 實際 GA4 代碼應該是：
-  // gtag('event', 'add_to_cart', {
-  //     currency: 'TWD',
-  //     value: price,
-  //     items: [{
-  //         item_name: product_name,
-  //         price: price,
-  //         quantity: 1
-  //     }]
-  // });
+  // 丟到 dataLayer，給 GTM / GA4 捕捉
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "add_to_cart",
+    currency: "TWD",
+    value: price,
+    items: [
+      {
+        item_name: product_name,
+        price: price,
+        quantity: 1,
+      },
+    ],
+  });
 
+  // 顯示提示
   showModal("已加入購物車", `${product_name} - NT$ ${price.toLocaleString()}`);
+
+  // 延遲一點時間再跳轉，確保事件有機會送出
+  setTimeout(() => {
+    window.location.href = "phone.html";
+  }, 800); // 0.8 秒後導頁
 }
+
 
 function trackNewsletter(event) {
   event.preventDefault();

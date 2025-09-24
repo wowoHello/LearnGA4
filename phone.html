@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智慧型手機GA4測試</title>
+    <link rel="stylesheet" href="css/phone.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Navigation -->
+      <header>
+        <nav>
+          <div class="logo" onclick="goToHomePage()">🛍️ GA4 測試商店</div>
+          <div class="nav-links">
+            <a href="#home" onclick="trackNavigation('home')">首頁</a>
+            <a href="#products" onclick="trackNavigation('products')">商品</a>
+            <a href="#about" onclick="trackNavigation('about')">關於我們</a>
+            <a href="#contact" onclick="trackNavigation('contact')">聯絡我們</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="#home" onclick="trackBreadcrumb('home')">首頁</a>
+        <span>></span>
+        <a href="#products" onclick="trackBreadcrumb('products')">商品列表</a>
+        <span>></span>
+        <span>智慧型手機</span>
+      </div>
+
+      <!-- Product Detail -->
+      <div class="product-detail">
+        <div class="product-header">
+          <div class="product-images">
+            <div class="main-image" onclick="trackImageView('main_image')">
+              📱
+            </div>
+            <div class="thumbnail-images">
+              <div class="thumbnail active" onclick="changeImage('front')">
+                📱
+              </div>
+              <div class="thumbnail" onclick="changeImage('back')">📲</div>
+              <div class="thumbnail" onclick="changeImage('side')">📳</div>
+              <div class="thumbnail" onclick="changeImage('box')">📦</div>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <h1>XPhone Pro 智慧型手機</h1>
+
+            <div class="product-rating">
+              <div class="stars">★★★★☆</div>
+              <span class="rating-text">4.5 (328 評價)</span>
+              <a
+                href="#reviews"
+                onclick="trackEvent('engagement', 'click', 'view_reviews')"
+                style="color: #667eea; margin-left: 1rem"
+                >查看評價</a
+              >
+            </div>
+
+            <div
+              style="display: flex; align-items: center; margin-bottom: 2rem"
+            >
+              <span class="product-price">NT$ 15,999</span>
+              <span class="original-price">NT$ 19,999</span>
+              <span class="discount-badge">20% OFF</span>
+            </div>
+
+            <div class="product-description">
+              <p>
+                全新 XPhone Pro 搭載最先進的處理器，6.7 吋 OLED
+                螢幕提供絕佳視覺體驗。三鏡頭相機系統讓你拍出專業級照片，5000mAh
+                大容量電池確保全天候使用無憂。
+              </p>
+            </div>
+
+            <div class="product-options">
+              <div class="option-group">
+                <div class="option-label">顏色選擇</div>
+                <div class="color-options">
+                  <div
+                    class="color-option color-black active"
+                    onclick="selectColor('black')"
+                    title="經典黑"
+                  ></div>
+                  <div
+                    class="color-option color-white"
+                    onclick="selectColor('white')"
+                    title="雪花白"
+                  ></div>
+                  <div
+                    class="color-option color-gold"
+                    onclick="selectColor('gold')"
+                    title="玫瑰金"
+                  ></div>
+                  <div
+                    class="color-option color-blue"
+                    onclick="selectColor('blue')"
+                    title="海洋藍"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="option-group">
+                <div class="option-label">儲存容量</div>
+                <div class="storage-options">
+                  <div class="storage-option" onclick="selectStorage('128GB')">
+                    128GB
+                  </div>
+                  <div
+                    class="storage-option active"
+                    onclick="selectStorage('256GB')"
+                  >
+                    256GB (+NT$ 2,000)
+                  </div>
+                  <div class="storage-option" onclick="selectStorage('512GB')">
+                    512GB (+NT$ 5,000)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="quantity-selector">
+              <span style="font-weight: bold">數量：</span>
+              <button class="quantity-btn" onclick="changeQuantity(-1)">
+                -
+              </button>
+              <input
+                type="number"
+                class="quantity-input"
+                value="1"
+                min="1"
+                max="10"
+                id="quantity"
+              />
+              <button class="quantity-btn" onclick="changeQuantity(1)">
+                +
+              </button>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-primary" onclick="addToCart()">
+                🛒 加入購物車
+              </button>
+              <button class="btn btn-secondary" onclick="buyNow()">
+                ⚡ 立即購買
+              </button>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-outline" onclick="addToWishlist()">
+                ❤️ 加入願望清單
+              </button>
+              <button class="btn btn-outline" onclick="compareProduct()">
+                ⚖️ 加入比較
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specifications -->
+      <div class="specifications">
+        <h2>產品規格</h2>
+        <div class="spec-grid">
+          <div class="spec-item">
+            <span class="spec-label">螢幕尺寸</span>
+            <span class="spec-value">6.7 吋 OLED</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">處理器</span>
+            <span class="spec-value">A17 Pro 晶片</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">記憶體</span>
+            <span class="spec-value">8GB RAM</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">主相機</span>
+            <span class="spec-value">48MP 三鏡頭</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">電池容量</span>
+            <span class="spec-value">5000mAh</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">作業系統</span>
+            <span class="spec-value">iOS 17</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">防水等級</span>
+            <span class="spec-value">IP68</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">重量</span>
+            <span class="spec-value">201g</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Section -->
+      <div class="reviews" id="reviews">
+        <h2>用戶評價</h2>
+        <div class="review-summary">
+          <div class="review-score">
+            <div class="review-score-number">4.5</div>
+            <div class="stars">★★★★☆</div>
+            <div>基於 328 個評價</div>
+          </div>
+          <div style="flex: 1">
+            <button
+              class="btn btn-outline"
+              onclick="writeReview()"
+              style="margin-bottom: 1rem"
+            >
+              ✍️ 撰寫評價
+            </button>
+            <p>大多數用戶對相機品質和電池續航力給予好評</p>
+          </div>
+        </div>
+
+        <div class="review-item">
+          <div class="review-header">
+            <div>
+              <div class="review-author">林小明</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <div class="review-date">2025年9月20日</div>
+          </div>
+          <p>
+            相機真的很棒！夜拍效果超乎期待，電池續航力也很不錯，一整天使用下來還有30%電量。
+          </p>
+        </div>
+
+        <div class="review-item">
+          <div class="review-header">
+            <div>
+              <div class="review-author">王小華</div>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="review-date">2025年9月18日</div>
+          </div>
+          <p>
+            手機很順暢，螢幕顯示效果很好，就是價格有點高，但整體來說還是值得推薦的。
+          </p>
+        </div>
+
+        <button
+          class="btn btn-outline"
+          onclick="loadMoreReviews()"
+          style="margin-top: 1rem"
+        >
+          查看更多評價
+        </button>
+      </div>
+
+      <!-- Related Products -->
+      <div class="related-products">
+        <h2>相關商品推薦</h2>
+        <div class="products-grid">
+          <div class="related-product" onclick="viewRelatedProduct('laptop')">
+            <div class="related-product-image">💻</div>
+            <h3>筆記型電腦</h3>
+            <p>NT$ 29,999</p>
+          </div>
+          <div
+            class="related-product"
+            onclick="viewRelatedProduct('headphones')"
+          >
+            <div class="related-product-image">🎧</div>
+            <h3>無線耳機</h3>
+            <p>NT$ 3,499</p>
+          </div>
+          <div class="related-product" onclick="viewRelatedProduct('tablet')">
+            <div class="related-product-image">📲</div>
+            <h3>平板電腦</h3>
+            <p>NT$ 12,999</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h3 id="modal-title">操作成功！</h3>
+        <p id="modal-message">操作已完成</p>
+        <button
+          class="btn btn-primary"
+          onclick="closeModal()"
+          style="margin-top: 1rem"
+        >
+          確定
+        </button>
+      </div>
+    </div>
+    <script src="js/phone.js"></script>
+  </body>
+</html>
