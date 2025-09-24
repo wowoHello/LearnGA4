@@ -21,13 +21,9 @@ function trackPurchase(product_name, price) {
     event: "add_to_cart",
     currency: "TWD",
     value: price,
-    items: [
-      {
-        item_name: product_name,
-        price: price,
-        quantity: 1,
-      },
-    ],
+    item_name: product_name,
+    price: price,
+    quantity: 1,
   });
 
   // 等 0.5 秒再跳轉，避免事件還沒送出就中斷
@@ -35,8 +31,6 @@ function trackPurchase(product_name, price) {
     window.location.href = "phone.html";
   }, 500);
 }
-
-
 
 function trackNewsletter(event) {
   event.preventDefault();
