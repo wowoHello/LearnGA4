@@ -77,7 +77,7 @@ function goToHomePage() {
     timestamp: new Date().toISOString(),
   });
 
-  showModal("頁面跳轉", "即將返回首頁...");
+  window.history.back();
 }
 
 // 圖片檢視追蹤
