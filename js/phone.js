@@ -55,13 +55,10 @@
                 destination: 'home',
                 source_page: 'product_detail',
                 timestamp: new Date().toISOString()
-            });
-            
-            // 模擬頁面跳轉（實際情況下這裡會是真的跳轉）
-            showModal('頁面跳轉', '即將返回首頁...');
+            });                        
             
             // 實際應用中可以是：
-            // window.location.href = '/';
+            window.history.back();
         }
 
         // 圖片檢視追蹤

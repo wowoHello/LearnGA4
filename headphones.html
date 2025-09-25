@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WV559G75");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirPods Ultra 無線耳機 - GA4 測試商店</title>
+    <link rel="stylesheet" href="css/headphones.css" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WV559G75"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+      <!-- Header Navigation -->
+      <header>
+        <nav>
+          <div class="logo" onclick="goToHomePage()">🛍️ GA4 測試商店</div>
+          <div class="nav-links">
+            <a href="#home" onclick="trackNavigation('home')">首頁</a>
+            <a href="#products" onclick="trackNavigation('products')">商品</a>
+            <a href="#about" onclick="trackNavigation('about')">關於我們</a>
+            <a href="#contact" onclick="trackNavigation('contact')">聯絡我們</a>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="#home" onclick="trackBreadcrumb('home')">首頁</a>
+        <span>></span>
+        <a href="#products" onclick="trackBreadcrumb('products')">商品列表</a>
+        <span>></span>
+        <a href="#audio" onclick="trackBreadcrumb('audio')">音響設備</a>
+        <span>></span>
+        <span>無線耳機</span>
+      </div>
+
+      <!-- Product Detail -->
+      <div class="product-detail">
+        <div class="product-header">
+          <div class="product-images">
+            <div class="main-image" onclick="trackImageView('main_image')">
+              🎧
+            </div>
+            <div class="thumbnail-images">
+              <div class="thumbnail active" onclick="changeImage('main')">
+                🎧
+              </div>
+              <div class="thumbnail" onclick="changeImage('case')">📦</div>
+              <div class="thumbnail" onclick="changeImage('wearing')">👂</div>
+              <div class="thumbnail" onclick="changeImage('charging')">🔋</div>
+            </div>
+          </div>
+
+          <div class="product-info">
+            <div class="badge-container">
+              <span class="badge badge-bestseller">⭐ 暢銷第一</span>
+              <span class="badge badge-anc">🔇 主動降噪</span>
+              <span class="badge badge-warranty">✓ 一年保固</span>
+            </div>
+
+            <h1>AirPods Ultra 無線耳機</h1>
+
+            <div class="product-rating">
+              <div class="stars">★★★★★</div>
+              <span class="rating-text">4.9 (1,243 評價)</span>
+              <a
+                href="#reviews"
+                onclick="trackEvent('engagement', 'click', 'view_reviews')"
+                style="color: #667eea; margin-left: 1rem"
+                >查看評價</a
+              >
+            </div>
+
+            <div
+              style="display: flex; align-items: center; margin-bottom: 2rem"
+            >
+              <span class="product-price">NT$ 3,499</span>
+              <span class="original-price">NT$ 4,990</span>
+              <span class="discount-badge">30% OFF</span>
+            </div>
+
+            <div class="product-description">
+              <p>
+                全新 AirPods Ultra
+                搭載進階主動降噪技術，提供沉浸式音質體驗。空間音訊、個人化空間音訊，配合自適應等化器，為你帶來前所未有的聆聽享受。單次充電可使用
+                6 小時，搭配充電盒總續航力達 30 小時。
+              </p>
+            </div>
+
+            <div class="key-features">
+              <h3>核心特色</h3>
+              <div class="feature-grid">
+                <div class="feature-item">
+                  <div class="feature-icon">🔇</div>
+                  <div class="feature-text">
+                    <div class="feature-label">主動降噪</div>
+                    <div class="feature-value">智慧降噪技術</div>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">🎵</div>
+                  <div class="feature-text">
+                    <div class="feature-label">空間音訊</div>
+                    <div class="feature-value">3D 環繞音效</div>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">🔋</div>
+                  <div class="feature-text">
+                    <div class="feature-label">續航力</div>
+                    <div class="feature-value">總計 30 小時</div>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">💧</div>
+                  <div class="feature-text">
+                    <div class="feature-label">防水等級</div>
+                    <div class="feature-value">IPX4 防水</div>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">⚡</div>
+                  <div class="feature-text">
+                    <div class="feature-label">快速充電</div>
+                    <div class="feature-value">5分鐘充1小時</div>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">📱</div>
+                  <div class="feature-text">
+                    <div class="feature-label">連接</div>
+                    <div class="feature-value">藍牙 5.3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-options">
+              <div class="option-group">
+                <div class="option-label">顏色選擇</div>
+                <div class="color-options">
+                  <div
+                    class="color-option color-black active"
+                    onclick="selectColor('black')"
+                    title="經典黑"
+                  ></div>
+                  <div
+                    class="color-option color-white"
+                    onclick="selectColor('white')"
+                    title="珍珠白"
+                  ></div>
+                  <div
+                    class="color-option color-blue"
+                    onclick="selectColor('blue')"
+                    title="天空藍"
+                  ></div>
+                  <div
+                    class="color-option color-pink"
+                    onclick="selectColor('pink')"
+                    title="櫻花粉"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="option-group">
+                <div class="option-label">選擇套餐</div>
+                <div class="package-options">
+                  <div
+                    class="package-option active"
+                    onclick="selectPackage('basic')"
+                  >
+                    <div class="package-title">🎧 基本款</div>
+                    <div class="package-price">NT$ 3,499</div>
+                    <ul class="package-items">
+                      <li>AirPods Ultra 耳機</li>
+                      <li>無線充電盒</li>
+                      <li>USB-C 充電線</li>
+                    </ul>
+                  </div>
+                  <div
+                    class="package-option"
+                    onclick="selectPackage('premium')"
+                  >
+                    <div class="package-title">⭐ 豪華組</div>
+                    <div class="package-price">NT$ 4,299</div>
+                    <ul class="package-items">
+                      <li>AirPods Ultra 耳機</li>
+                      <li>無線充電盒</li>
+                      <li>USB-C 充電線</li>
+                      <li>矽膠保護套</li>
+                      <li>額外耳塞 (3對)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="quantity-selector">
+              <span style="font-weight: bold">數量：</span>
+              <button class="quantity-btn" onclick="changeQuantity(-1)">
+                -
+              </button>
+              <input
+                type="number"
+                class="quantity-input"
+                value="1"
+                min="1"
+                max="10"
+                id="quantity"
+              />
+              <button class="quantity-btn" onclick="changeQuantity(1)">
+                +
+              </button>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-primary" onclick="addToCart()">
+                🛒 加入購物車
+              </button>
+              <button class="btn btn-secondary" onclick="buyNow()">
+                ⚡ 立即購買
+              </button>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn btn-outline" onclick="addToWishlist()">
+                ❤️ 加入願望清單
+              </button>
+              <button class="btn btn-outline" onclick="compareProduct()">
+                ⚖️ 加入比較
+              </button>
+              <button class="btn btn-outline" onclick="shareProduct()">
+                📤 分享商品
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/headphones.js"></script>
+  </body>
+</html>

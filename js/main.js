@@ -1,18 +1,14 @@
 // 模擬 GA4 事件追蹤函數
 // 在實際使用時，您需要替換為真正的 gtag 函數
 
-function trackPurchase(product_name, price) {
-  console.log("GA4 Purchase Event:", {
+function trackPhone(product_name, price) {
+  console.log("GA4 Phone Event:", {
     event_name: "add_to_cart",
     currency: "TWD",
     value: price,
-    items: [
-      {
-        item_name: product_name,
-        price: price,
-        quantity: 1,
-      },
-    ],
+    item_name: product_name,
+    price: price,
+    quantity: 1,
   });
 
   // 丟到 dataLayer，給 GTM / GA4 捕捉
@@ -29,6 +25,60 @@ function trackPurchase(product_name, price) {
   // 等 0.5 秒再跳轉，避免事件還沒送出就中斷
   setTimeout(() => {
     window.location.href = "phone.html";
+  }, 500);
+}
+
+function trackUltrabook(product_name, price) {
+  console.log("GA4 Ultrabook Event:", {
+    event_name: "add_to_cart",
+    currency: "TWD",
+    value: price,
+    item_name: product_name,
+    price: price,
+    quantity: 1,
+  });
+
+  // 丟到 dataLayer，給 GTM / GA4 捕捉
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "add_to_cart",
+    currency: "TWD",
+    value: price,
+    item_name: product_name,
+    price: price,
+    quantity: 1,
+  });
+
+  // 等 0.5 秒再跳轉，避免事件還沒送出就中斷
+  setTimeout(() => {
+    window.location.href = "ultrabook.html";
+  }, 500);
+}
+
+function trackHeadphones(product_name, price) {
+  console.log("GA4 Headphones Event:", {
+    event_name: "add_to_cart",
+    currency: "TWD",
+    value: price,
+    item_name: product_name,
+    price: price,
+    quantity: 1,
+  });
+
+  // 丟到 dataLayer，給 GTM / GA4 捕捉
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "add_to_cart",
+    currency: "TWD",
+    value: price,
+    item_name: product_name,
+    price: price,
+    quantity: 1,
+  });
+
+  // 等 0.5 秒再跳轉，避免事件還沒送出就中斷
+  setTimeout(() => {
+    window.location.href = "headphones.html";
   }, 500);
 }
 

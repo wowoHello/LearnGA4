@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WV559G75");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraBook Pro 15 筆記型電腦 - GA4 測試商店</title>
+    <link rel="stylesheet" href="css/ultrabook.css">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WV559G75"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <!-- Header Navigation -->
+        <header>
+            <nav>
+                <div class="logo" onclick="goToHomePage()">🛍️ GA4 測試商店</div>
+                <div class="nav-links">
+                    <a href="#home" onclick="trackNavigation('home')">首頁</a>
+                    <a href="#products" onclick="trackNavigation('products')">商品</a>
+                    <a href="#about" onclick="trackNavigation('about')">關於我們</a>
+                    <a href="#contact" onclick="trackNavigation('contact')">聯絡我們</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#home" onclick="trackBreadcrumb('home')">首頁</a>
+            <span>></span>
+            <a href="#products" onclick="trackBreadcrumb('products')">商品列表</a>
+            <span>></span>
+            <a href="#electronics" onclick="trackBreadcrumb('electronics')">電子產品</a>
+            <span>></span>
+            <span>筆記型電腦</span>
+        </div>
+
+        <!-- Product Detail -->
+        <div class="product-detail">
+            <div class="product-header">
+                <div class="product-images">
+                    <div class="main-image" onclick="trackImageView('main_image')">💻</div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active" onclick="changeImage('front')">💻</div>
+                        <div class="thumbnail" onclick="changeImage('keyboard')">⌨️</div>
+                        <div class="thumbnail" onclick="changeImage('side')">🖥️</div>
+                        <div class="thumbnail" onclick="changeImage('ports')">🔌</div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <div class="badge-container">
+                        <span class="badge badge-new">🆕 新品上市</span>
+                        <span class="badge badge-hot">🔥 熱銷商品</span>
+                        <span class="badge badge-free-shipping">📦 免運費</span>
+                    </div>
+
+                    <h1>UltraBook Pro 15 筆記型電腦</h1>
+                    
+                    <div class="product-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="rating-text">4.8 (562 評價)</span>
+                        <a href="#reviews" onclick="trackEvent('engagement', 'click', 'view_reviews')" style="color: #667eea; margin-left: 1rem;">查看評價</a>
+                    </div>
+
+                    <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+                        <span class="product-price">NT$ 29,999</span>
+                        <span class="original-price">NT$ 39,999</span>
+                        <span class="discount-badge">25% OFF</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>全新 UltraBook Pro 15 搭載最新 Intel Core i7 處理器，15.6 吋 4K OLED 觸控螢幕，輕薄僅 1.5kg，續航力達 12 小時。完美結合效能與便攜性，是專業工作者的最佳選擇。</p>
+                    </div>
+
+                    <div class="highlight-features">
+                        <h3>核心特色</h3>
+                        <ul>
+                            <li>第 13 代 Intel Core i7 處理器</li>
+                            <li>15.6 吋 4K OLED 觸控螢幕</li>
+                            <li>最高 32GB RAM 與 1TB SSD</li>
+                            <li>長達 12 小時電池續航</li>
+                            <li>ThunderBolt 4 快速傳輸</li>
+                            <li>背光鍵盤與指紋辨識</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <div class="option-label">處理器選擇</div>
+                            <div class="processor-options">
+                                <div class="option-btn" onclick="selectProcessor('i5')">
+                                    <span>Intel i5</span>
+                                    <span class="option-price">標準價</span>
+                                </div>
+                                <div class="option-btn active" onclick="selectProcessor('i7')">
+                                    <span>Intel i7</span>
+                                    <span class="option-price">+NT$ 3,000</span>
+                                </div>
+                                <div class="option-btn" onclick="selectProcessor('i9')">
+                                    <span>Intel i9</span>
+                                    <span class="option-price">+NT$ 8,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <div class="option-label">記憶體容量</div>
+                            <div class="ram-options">
+                                <div class="option-btn" onclick="selectRAM('8GB')">
+                                    <span>8GB RAM</span>
+                                    <span class="option-price">標準價</span>
+                                </div>
+                                <div class="option-btn active" onclick="selectRAM('16GB')">
+                                    <span>16GB RAM</span>
+                                    <span class="option-price">+NT$ 2,000</span>
+                                </div>
+                                <div class="option-btn" onclick="selectRAM('32GB')">
+                                    <span>32GB RAM</span>
+                                    <span class="option-price">+NT$ 5,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <div class="option-label">儲存容量</div>
+                            <div class="storage-options">
+                                <div class="option-btn" onclick="selectStorage('256GB')">
+                                    <span>256GB SSD</span>
+                                    <span class="option-price">標準價</span>
+                                </div>
+                                <div class="option-btn active" onclick="selectStorage('512GB')">
+                                    <span>512GB SSD</span>
+                                    <span class="option-price">+NT$ 2,000</span>
+                                </div>
+                                <div class="option-btn" onclick="selectStorage('1TB')">
+                                    <span>1TB SSD</span>
+                                    <span class="option-price">+NT$ 5,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <span style="font-weight: bold;">數量：</span>
+                        <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" max="5" id="quantity">
+                        <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="addToCart()">
+                            🛒 加入購物車
+                        </button>
+                        <button class="btn btn-secondary" onclick="buyNow()">
+                            ⚡ 立即購買
+                        </button>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-outline" onclick="addToWishlist()">
+                            ❤️ 加入願望清單
+                        </button>
+                        <button class="btn btn-outline" onclick="compareProduct()">
+                            ⚖️ 加入比較
+                        </button>
+                        <button class="btn btn-outline" onclick="shareProduct()">
+                            📤 分享商品
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs Section -->
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="switchTab('specs')">詳細規格</button>
+                <button class="tab-button" onclick="switchTab('features')">功能特色</button>
+                <button class="tab-button" onclick="switchTab('reviews')">用戶評價</button>
+                <button class="tab-button" onclick="switchTab('qa')">常見問題</button>
+                <button class="tab-button" onclick="switchTab('compare')">型號比較</button>
+            </div>
+
+            <div id="specs" class="tab-content active">
+                <h2>詳細規格</h2>
+                <table class="spec-table">
+                    <tr><td>處理器</td><td>Intel Core i7-1355U (第13代)</td></tr>
+                    <tr><td>記憶體</td><td>16GB DDR5 4800MHz (最高支援32GB)</td></tr>
+                    <tr><td>儲存裝置</td><td>512GB PCIe 4.0 NVMe SSD</td></tr>
+                    <tr><td>顯示螢幕</td><td>15.6吋 4K OLED 觸控螢幕 (3840x2160)</td></tr>
+                    <tr><td>顯示卡</td><td>Intel Iris Xe Graphics</td></tr>
+                    <tr><td>作業系統</td><td>Windows 11 Pro</td></tr>
+                    <tr><td>電池</td><td>75Wh 鋰電池，續航達12小時</td></tr>
+                    <tr><td>重量</td><td>1.5 kg</td></tr>
+                    <tr><td>尺寸</td><td>356 x 234 x 16.9 mm</td></tr>
+                    <tr><td>連接埠</td><td>2x Thunderbolt 4, 2x USB 3.2, HDMI 2.1, 3.5mm 音源孔</td></tr>
+                    <tr><td>無線連接</td><td>Wi-Fi 6E, Bluetooth 5.3</td></tr>
+                    <tr><td>安全性</td><td>指紋辨識, TPM 2.0, 紅外線人臉辨識</td></tr>
+                </table>
+            </div>
+
+            <div id="features" class="tab-content">
+                <h2>功能特色</h2>
+                <h3>🚀 極致效能</h3>
+                <p>搭載第 13 代 Intel Core i7 處理器，配合高速 DDR5 記憶體，輕鬆處理多工作業、影片剪輯和 3D 渲染。</p>
+                
+                <h3>🎨 絕美顯示</h3>
+                <p>15.6 吋 4K OLED 觸控螢幕，100% DCI-P3 色域，HDR 支援，為創作者帶來專業級色彩表現。</p>
+                
+                <h3>⚡ 極速傳輸</h3>
+                <p>配備 Thunderbolt 4 介面，傳輸速度達 40Gbps，支援外接 8K 顯示器和高速儲存裝置。</p>
+                
+                <h3>🔋 持久續航</h3>
+                <p>75Wh 大容量電池，智慧電源管理，一般使用可達 12 小時，支援快速充電技術。</p>
+
+                <h3>🔒 安全防護</h3>
+                <p>多重生物辨識系統，包含指紋辨識與紅外線人臉辨識，搭配 TPM 2.0 晶片確保資料安全。</p>
+            </div>
+
+            <div id="reviews" class="tab-content">
+                <h2>用戶評價</h2>
+                <div class="review-item" style="border-bottom: 1px solid #eee; padding: 1.5rem 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                        <div>
+                            <div style="font-weight: bold;">張工程師</div>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <div style="color: #999;">2025年9月20日</div>
+                    </div>
+                    <p>效能超強！用來跑 AI 模型和處理大量數據都很順暢，螢幕色彩表現也很棒，強烈推薦給需要高效能的專業人士。</p>
+                </div>
+
+                <div class="review-item">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/ultrabook.js"></script>
+    </body>
+</html>
