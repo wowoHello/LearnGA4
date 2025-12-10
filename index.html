@@ -67,8 +67,22 @@
           class="cta-button"
           onclick="trackEvent('engagement', 'cta_click', 'hero_button')"
         >
-          開始探索
+          分享測試
         </button>
+        <hr />
+        <h6 class="text-primary">方法 1: Web Share API (喚起 App)</h6>
+        <button id="native-share-btn" class="btn btn-primary w-100 mb-3">
+          📱 點我呼叫系統分享 (預設)
+        </button>
+        <hr />
+        <h6 class="text-secondary mt-4">方法 2: 傳統超連結 (Fallback)</h6>
+        <a
+          href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com"
+          target="_blank"
+          class="btn btn-outline-secondary w-100"
+        >
+          🔗 傳統網頁版分享
+        </a>
       </section>
 
       <!-- Products Section -->
@@ -77,10 +91,7 @@
           <div class="product-image">📱</div>
           <div class="product-title">智慧型手機</div>
           <div class="product-price">NT$ 15,999</div>
-          <button
-            class="add-to-cart"
-            onclick="trackPhone('smartphone', 15999)"
-          >
+          <button class="add-to-cart" onclick="trackPhone('smartphone', 15999)">
             加入購物車
           </button>
         </div>

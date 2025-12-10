@@ -181,3 +181,35 @@ console.log(
   "💡 提示：打開瀏覽器開發者工具的 Console 面板，可以看到所有 GA4 事件的模擬輸出"
 );
 console.log("📝 在實際使用時，請將 console.log 替換為真正的 gtag 函數");
+
+const shareBtn = document.getElementById("native-share-btn");
+const logBox = document.getElementById("console-log");
+
+shareBtn.addEventListener("click", async () => {
+  // 要分享的資料
+  const shareData = {
+    title: "測試標題",
+    text: "這是我正在測試 Web Share API 的功能！",
+    url: "https://www.google.com", // 這裡放您的網站連結
+  };
+
+  // 1. 檢查瀏覽器是否支援
+  if (navigator.share) {
+    try {
+      logBox.textContent = "嘗試喚起系統選單...";
+      await navigator.share(shareData);
+      logBox.textContent = "✅ 分享成功 (或使用者已操作完畢)";
+    } catch (err) {
+      logBox.textContent = "❌ 取消或錯誤: " + err;
+    }
+  } else {
+    // 2.如果不支援 (電腦版或舊瀏覽器)
+    logBox.textContent = "⚠️ 此瀏覽器不支援 Web Share API，改為開啟網頁。";
+    window.open(
+      `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+        shareData.url
+      )}`,
+      "_blank"
+    );
+  }
+});
