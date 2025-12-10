@@ -182,6 +182,9 @@ console.log(
 );
 console.log("📝 在實際使用時，請將 console.log 替換為真正的 gtag 函數");
 
+
+
+
 const shareBtn = document.getElementById("native-share-btn");
 const logBox = document.getElementById("console-log");
 
